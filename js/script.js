@@ -1,7 +1,51 @@
-import Swiper from 'image_slider';
-import 'swiper/css';
-const swiper = new Swiper('.image_slider');
-// new Swiper();
+import Swiper from 'swiper/bundle';
+
+import { Navigation, Pagination } from 'swiper/modules';
+// import 'swiper/css';
+import 'swiper/css/bundle';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// const swiper = new Swiper('.image_slider');
+// new Swiper('.image_slider');
+// const mySwiper = new Swiper('image_slider', {
+//   slidesPerView: 4,
+//   spaceBetween: 30,
+//   loop: true,
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+// });
+const mySwiper = new Swiper('swiper', {
+  modules: [Navigation, Pagination],
+  // Optional parameters
+  direction: 'vertical',
+  slidesPerView: 4,
+  spaceBetween: 300,
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 // , {
 // Вывод стрелок навигации
 //   navigation: {

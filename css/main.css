@@ -4,9 +4,9 @@ body {
     font-size: 14px;
     background-color: #333;
 }
-img {
+/* img {
     vertical-align: top;
-}
+} */
 .swiper {
     padding: 30px;
     min-height: 100%;
@@ -33,9 +33,15 @@ img {
     max-width: 100%;
 }
 
-.swiper-pagination {}
+.image_slider .swiper-pagination {
+    bottom: 0;
+}
 
-.swiper-button-prev {}
+.image_slider .swiper-button-prev::after,
+.image_slider .swiper-button-next::after{
+    color: aqua;
+    font-size: 80px;
+}
 
 .swiper-button-next {}
 
